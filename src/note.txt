@@ -1,0 +1,13 @@
+august-8
+components,appdata, pages, props and
+hover:ring-2 hover:ring-purple
+props-by defaulf object 
+key name,value
+
+aug-7
+anynomus function- ()=>{
+  it call the function after click
+
+}
+window.addEvenListener
+component Function, and normal function
