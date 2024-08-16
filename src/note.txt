@@ -1,3 +1,17 @@
+
+ease-in-out, reansiion, duration,
+ring-5px, ring-pink-500
+aug-13
+react icon
+place-content, place-items-center,
+alin-content
+
+
+jusify-center- flex-col, 
+flex-row
+outlet, childrenRouter
+design princpole
+
 august-8
 components,appdata, pages, props and
 hover:ring-2 hover:ring-purple
