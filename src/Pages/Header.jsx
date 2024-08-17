@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <><div className='flex flex-row justify-around  bg-black text-white py-4 px-7 space-x-5'>
+    <><div className='flex flex-row justify-around  bg-black text-white py-4 px-7 space-x-5 shadow-md'>
       <div className=' 
        flex flex-row space-x-96 '>
 
@@ -11,8 +11,8 @@ const Header = () => {
           <NavLink to='/'>Header</NavLink></h1>
         <ul className='text-white flex space-x-5 sm:hidden'>
           <li><NavLink to='/AboutPage'>About us</NavLink></li>
-          <li><NavLink to='/Contact'>Contact us</NavLink></li>
-          <li><NavLink to='/Sample'>Sign in</NavLink></li>
+          <li><NavLink to='/Contact'>Tiny Project</NavLink></li>
+          <li><NavLink to='/Sample'>Tiny Project</NavLink></li>
         </ul>
       </div>
       <h1>Search button</h1>
