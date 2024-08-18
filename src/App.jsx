@@ -5,6 +5,7 @@ import AboutPage from './Pages/AboutPage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Contact from './Pages/Contact.jsx'
 import RootLayout from './Pages/RootLayout.jsx'
+import Project from './Pages/Project.jsx'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const App = () => {
           path: 'Contact',
           element: <Contact />
         },
+        {
+          path: 'class-project',
+          element: <Project />
+
+        }
       ]
     }
 
