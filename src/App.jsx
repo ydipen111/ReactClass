@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Contact from './Pages/Contact.jsx'
 import RootLayout from './Pages/RootLayout.jsx'
 import Project from './Pages/Project.jsx'
+import ReactClass from './Components/MERN/ReactClass.jsx'
+import Hooks from './Components/MERN/ReactPart/Hooks.jsx'
+import Redux from './Components/MERN/ReactPart/Redux.jsx'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,15 +31,26 @@ const App = () => {
         {
           path: 'class-project',
           element: <Project />
-
+        },
+        {
+          path: 'react-class',
+          element: <ReactClass />,
+          children: [
+            {
+              path: 'usestates',
+              element: <Hooks />
+            },
+            {
+              path: 'redux',
+              element: <Redux />
+            }
+          ]
         }
       ]
     }
-
   ])
 
   return <RouterProvider router={router} />
 }
-
 
 export default App

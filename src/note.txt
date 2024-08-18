@@ -1,4 +1,21 @@
 
+aug-18
+virtual dom and real dom-initial render, main dom ,ren-render with hooks for data objects updates,
+reconcolization algorithim
+lifecycle-mount, update,
+const pi = useState();-----initial value, bounce function
+const [count, setCount]=useState(0);
+
+
+const Project = () => {
+  let count = 0;
+  const add = () => {
+    count++;
+  }
+  return (
+    <div className='' >
+      <h1 onClick={count}>Click here</h1>)
+
 ease-in-out, reansiion, duration,
 ring-5px, ring-pink-500
 aug-13

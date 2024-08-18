@@ -1,21 +1,18 @@
 import React from 'react';
-import { DiCss3, DiGit, DiHtml5, DiJava, DiJavascript1, DiNodejs, } from "react-icons/di";
-// import { IoLogoHtml5 } from "react-icons/io5";
-// import { FaCss3Alt } from "react-icons/fa";
-// import { TbBrandJavascript } from "react-icons/tb";
-// import { SiMongodb } from "react-icons/si";
-// import { SiExpress } from "react-icons/si";
-// import { FaGithub } from "react-icons/fa";
-import { Outlet } from 'react-router-dom';
+import { DiGit, DiJava, DiJavascript1, DiNodejs, DiReact, } from "react-icons/di";
+import { NavLink, Outlet } from 'react-router-dom';
 
 const ReactLogo = () => {
   return (
     <div className='grid grid-cols-4 space-y-3 space-x-4 place-items-center py-4'>
       <h1 className='col-span-4 text-2xl font-bold text-center '>Technologies I Use</h1>
 
-      <div className='text-[10rem] md:[8rem] sm:col-span-2 md: hover:scale-95 ease-in-out duration-200 transition-all'> <DiHtml5 /> </div>
-      <div className='text-[10rem] md:[8rem] sm:col-span-2 '> <DiCss3 /> </div>
-      <div className='text-[10rem] md:[8rem] sm:col-span-2 '> <DiJavascript1 /></div>
+      <div className='text-[10rem] md:[8rem] sm:col-span-2 '>
+
+        <NavLink to='react-class'> <DiReact />
+        </NavLink></div>
+      <div className='text-[10rem] md:[8rem] sm:col-span-2 '>
+        <NavLink to='react-class'> <DiJavascript1 /></NavLink></div>
       <div className='text-[10rem] sm:col-span-2 md:text-[8rem] '> <DiNodejs /> </div>
       <div className='text-[10rem] sm:col-span-2 md:text-[8rem] '> <DiJava /> </div>
       <div className='text-[10rem] sm:col-span-2 md:text-[8rem] '> <DiGit /> </div>
