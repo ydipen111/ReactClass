@@ -1,4 +1,5 @@
 
+update, mount
 aug-18
 virtual dom and real dom-initial render, main dom ,ren-render with hooks for data objects updates,
 reconcolization algorithim
