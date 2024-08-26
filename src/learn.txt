@@ -1,0 +1,66 @@
+
+*****************
+found filter
+import React from 'react';
+
+const Project = () => {
+  const array = [1, 2, 3, 4, 5]
+  const found = array.filter(element => element);
+  console.log(found);
+
+  return (
+    <div>
+      {found.map(element => (
+        <div key={element}>
+          {element}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Project;
+
+********
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const Project = () => {
+  const [data, setData] = useState([]); // Step 1: useState to store data
+
+  useEffect(() => {
+    console.log('useEffect is running');
+    
+    const getData = async () => {
+      try {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        console.log('Data fetched:', response.data);
+        setData(response.data); // Step 3: Store fetched data in state
+      } catch (error) {
+        console.log('Error fetching data:', error);
+      }
+    };
+
+    getData(); // Call the function to fetch data
+  }, []); // Empty dependency array means this effect runs once when component mounts
+
+  console.log('Rendered data:', data);
+
+  return (
+    <div>
+      <h1>Fetched Data:</h1>
+      {data.length > 0 ? (
+        data.map((item) => (
+          <div key={item.id}>
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+          </div>
+        ))
+      ) : (
+        <p>No data available</p>
+      )}
+    </div>
+  );
+}
+
+export default Project;

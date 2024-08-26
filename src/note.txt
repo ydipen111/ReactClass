@@ -1,5 +1,21 @@
+aug-25
+axios.get('http['']);
+re-render and update
+render logic vistra setC call nagarney
+
+aug-22
+pending, reserve, reject
+quary param,-horrow movie
+id pass for-- path params
+
+body-data base 
+headers-authorized
+params-key,
+
 
 update, mount
+
+
 aug-18
 virtual dom and real dom-initial render, main dom ,ren-render with hooks for data objects updates,
 reconcolization algorithim
