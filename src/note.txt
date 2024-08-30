@@ -1,3 +1,14 @@
+
+useNav. useParams
+
+const baseUrl = 'https://www.themealdb.com/api/json/v1/1';
+export const categoryUrl = `${baseUrl}/categorirs.php`
+
+hooks is called for function components and custom hooks;
+
+underfined vayo vane chai crash hudaina, tar undefined vitra koni dekhaounu paryo vane crash hnxa
+
+
 aug-25
 axios.get('http['']);
 re-render and update
@@ -14,7 +25,7 @@ params-key,
 
 
 update, mount
-
+`
 
 aug-18
 virtual dom and real dom-initial render, main dom ,ren-render with hooks for data objects updates,

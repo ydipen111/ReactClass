@@ -1,4 +1,150 @@
 
+
+
+fALSY AND TRYLY  VALUE
+subString:
+
+const App = () => {
+  const [message, setMessage] = useState('Hi there, how are you?');
+
+  useEffect(() => {
+    console.log('trigger use effect hook');
+
+    setTimeout(() => {
+      setMessage("I'm fine, thanks for asking.");
+    }, 1000)
+  })
+
+  return <h1>{message}</h1>
+};
+
+export default App;
+
+
+***************************8
+import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { routerCat } from '../Appdata/api_url.js';
+import axios from 'axios';
+
+const Project = () => {
+  const [data, setData] = useState([]);
+  const getData = async () => {
+    try {
+      const response = await axios.get(routerCat)
+      setData(response.data.categories);
+    } catch (error) {
+      console.log('This is error message', error);
+
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div className='px-4 py-4 grid grid-cols-4 space-y-2 shadow-md gap-3 ' >
+      {data.map((item, index) => (
+        <div key={index} className='col-span-1 md:col-span-4  space-y-3
+    '>
+          <ul>
+            <li >
+              <h1 className='className="text-2xl font-semibold"'>{item.categories}</h1></li>
+            <li className='object-cover'>{item.strCategory}</li>
+            <li className='text-'>{item.strCategoryThumb}</li>
+            <li className='text-'>{item.strCategoryDescription}</li>
+          </ul>
+
+
+        </div>
+      ))}
+
+    </div>
+  );
+}
+
+export default Project;
+
+***********************************************************
+import React, { useEffect, useState } from 'react';
+
+const Project = () => {
+  const [darkmode, setDarkMode] = useState('light');
+
+  const toggleTheme = () => {
+    setDarkMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'));
+  }
+
+  useEffect(() => {
+    if (darkmode === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkmode]);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center dark:bg-gray-900 dark:text-white">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">
+          {darkmode === 'light' ? 'Light Mode' : 'Dark Mode'}
+        </h1>
+        <button
+          onClick={toggleTheme}
+          className="px-4 py-2 bg-blue-500 text-white rounded dark:bg-gray-800 dark:text-yellow-500"
+        >
+          Switch to {darkmode === 'light' ? 'Dark' : 'Light'} Mode
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Project;
+
+
+**************
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const Project = () => {
+  const [c, setC] = useState([]);
+  const getData = async () => {
+    try {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      setC(response.data);
+
+    } catch (error) {
+
+    }
+  }
+
+
+
+  useEffect(() => {
+    getData();
+    console.log('Helo world');
+
+  }, []);
+
+  console.log('sello');
+
+
+
+  return (
+    <div>
+
+    </div>
+  );
+}
+
+export default Project;
+
+
+
+
 *****************
 found filter
 import React from 'react';
